@@ -1,4 +1,5 @@
-import express from 'express';
+/* eslint-disable @typescript-eslint/no-namespace */
+/* eslint-disable @typescript-eslint/no-empty-interface */
 export default '';
 
 declare global {
