@@ -17,6 +17,7 @@
     ],
     "rules": {
         "indent": [
+            "off",
             "tab"
         ],
         "quotes": [
