@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IExpressServer | express-server-architecture-boilerplate</title>
+	<title>IExampleMethods | express-server-architecture-boilerplate</title>
 	<meta name="description" content="Documentation for express-server-architecture-boilerplate">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,13 +55,13 @@
 					<a href="../modules.html">express-server-architecture-boilerplate</a>
 				</li>
 				<li>
-					<a href="../modules/common_server.html">common/server</a>
+					<a href="../modules/types_example.html">types/example</a>
 				</li>
 				<li>
-					<a href="common_server.IExpressServer.html">IExpressServer</a>
+					<a href="types_example.IExampleMethods.html">IExampleMethods</a>
 				</li>
 			</ul>
-			<h1>Interface IExpressServer</h1>
+			<h1>Interface IExampleMethods</h1>
 		</div>
 	</div>
 </header>
@@ -71,30 +71,19 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<a href="#iexpressserver" id="iexpressserver" style="color: inherit; text-decoration: none;">
-							<h2>IExpressServer</h2>
+						<a href="#iexamplemethods" id="iexamplemethods" style="color: inherit; text-decoration: none;">
+							<h3>IExampleMethods</h3>
 						</a>
-						<p>Interface dedicated to the {@link ExpressServer } class.</p>
+						<p>Example of a mongoose document methods interface <br>extention (implemented in the example model).</p>
 					</div>
-					<dl class="tsd-comment-tags">
-						<dt>interface</dt>
-						<dd><p>IExpressServer</p>
-						</dd>
-					</dl>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">IExpressServer</span>
+						<span class="target">IExampleMethods</span>
 					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel">
-				<h3>Implemented by</h3>
-				<ul class="tsd-hierarchy">
-					<li><a href="../classes/common_server.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -102,25 +91,46 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Properties</h3>
+							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="common_server.IExpressServer.html#app" class="tsd-kind-icon">app</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="types_example.IExampleMethods.html#checkOwnership" class="tsd-kind-icon">check<wbr>Ownership</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="app" class="tsd-anchor"></a>
-					<h3>app</h3>
-					<div class="tsd-signature tsd-kind-icon">app<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Application</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/jaschahuisman/express-server-architecture-boilerplate/blob/3dd590d/src/common/server.ts#L17">src/common/server.ts:17</a></li>
-						</ul>
-					</aside>
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="checkOwnership" class="tsd-anchor"></a>
+					<h3>check<wbr>Ownership</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">check<wbr>Ownership<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/jaschahuisman/express-server-architecture-boilerplate/blob/3dd590d/src/types/example/index.ts#L31">src/types/example/index.ts:31</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<a href="#checkownership" id="checkownership" style="color: inherit; text-decoration: none;">
+										<h3>checkOwnership</h3>
+									</a>
+									<p>Example method that checks if the owner of a specified <br>example document is the same as the given owner parameter.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>owner: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -142,13 +152,13 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/common_database.html">common/database</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/common_server.html">common/server</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/routes.html">routes</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/types_example.html">types/example</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -158,21 +168,27 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="../classes/common_server.default.html" class="tsd-kind-icon">default</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="common_server.IExpressServer.html" class="tsd-kind-icon">IExpress<wbr>Server</a>
+						<a href="types_example.IExampleMethods.html" class="tsd-kind-icon">IExample<wbr>Methods</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="common_server.IExpressServer.html#app" class="tsd-kind-icon">app</a>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="types_example.IExampleMethods.html#checkOwnership" class="tsd-kind-icon">check<wbr>Ownership</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="types_example.IExampleModel.html" class="tsd-kind-icon">IExample<wbr>Model</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="types_example.IExampleProperties.html" class="tsd-kind-icon">IExample<wbr>Properties</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="../modules/types_example.html#ExampleDocument" class="tsd-kind-icon">Example<wbr>Document</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
@@ -189,7 +205,7 @@
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
