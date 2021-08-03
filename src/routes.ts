@@ -1,4 +1,5 @@
 import express from 'express';
+import exampleRouter from './api/example/example.router';
 
 /**
  * ## Routes
@@ -16,7 +17,5 @@ import express from 'express';
  * @param  {express.Application} app
  */
 export default function routes(app: express.Application) {
-	app.use('/', (req, res) => {
-		res.send('test');
-	});
+	app.use('/example', exampleRouter);
 }
