@@ -1,0 +1,12 @@
+.vscode
+/build
+/documentation
+/node_modules
+.eslintignore
+.eslintrc.json
+.gitignore
+.prettierrc
+package-lock.json
+package.json
+tsconfig.json
+webpack.config.js
