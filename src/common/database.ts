@@ -10,6 +10,7 @@ export interface IDatabase {
 	getConnectionString(): string;
 	connect: () => Promise<mongoose.Connection>;
 	disconnect: () => Promise<void>;
+	clear: () => Promise<void>;
 }
 
 /**
@@ -100,5 +101,14 @@ export default class Database implements IDatabase {
 		await mongoose
 			.disconnect()
 			.then(() => console.info('*** Disconnected from database'));
+	}
+
+	/**
+	 * ### clear
+	 * Clear the database.
+	 * @returns {Promise<void>}
+	 */
+	public async clear(): Promise<void> {
+		await mongoose.connection.dropDatabase();
 	}
 }
