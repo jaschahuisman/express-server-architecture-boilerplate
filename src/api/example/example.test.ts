@@ -1,7 +1,9 @@
 import supertest from 'supertest';
 import Database from '@common/database';
 import Server from '@common/server';
+import Example from './example.model';
 
+/** Configuration */
 const database = new Database();
 const server = new Server();
 const app = supertest(server.app);
@@ -35,7 +37,27 @@ afterAll(async () => {
 	await database.disconnect();
 });
 
-describe('example routes', () => {
+/** Mongoose */
+describe('Example: Mongoose Model', () => {
+	it('should create an ExampleDocument instance', () => {
+		const example = new Example(examplePayload_1);
+		expect(example).toBeInstanceOf(Example);
+	});
+
+	it('should have a working checkOwnership method', () => {
+		const example = new Example(examplePayload_1);
+		expect(example.checkOwnership(examplePayload_1.owner)).toBe(true);
+	});
+
+	it('should have working a static getByName method', async () => {
+		const example = await Example.getByName(examplePayload_1.name);
+		expect(example).toBeDefined();
+		expect(example).toBeInstanceOf(Example);
+	});
+});
+
+/** Express */
+describe('Example: Express routes', () => {
 	it('should GET /example', async () => {
 		await app
 			.get('/example')
