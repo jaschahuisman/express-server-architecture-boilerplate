@@ -8,7 +8,8 @@ import mongoose from 'mongoose';
 export interface IDatabase {
 	options: mongoose.ConnectOptions;
 	getConnectionString(): string;
-	connect: () => mongoose.Connection;
+	connect: () => Promise<mongoose.Connection>;
+	disconnect: () => Promise<void>;
 }
 
 /**
@@ -67,12 +68,12 @@ export default class Database implements IDatabase {
 	 * database.connect();
 	 * ```
 	 *
-	 * @returns {mongoose.Connection}
+	 * @returns {Promise<mongoose.Connection>}
 	 */
-	public connect(): mongoose.Connection {
+	public async connect(): Promise<mongoose.Connection> {
 		const connectionString = this.getConnectionString();
 
-		mongoose
+		await mongoose
 			.connect(connectionString, this.options)
 			.then(() => {
 				console.info(`*** Connected to database: ${connectionString}`);
@@ -88,5 +89,16 @@ export default class Database implements IDatabase {
 		db.on('error', (err) => console.log('*** Database error: ', err));
 
 		return db;
+	}
+
+	/**
+	 * ### disconnect
+	 * Disconnect from the database.
+	 * @returns {Promise<void>}
+	 */
+	public async disconnect(): Promise<void> {
+		await mongoose
+			.disconnect()
+			.then(() => console.info('*** Disconnected from database'));
 	}
 }
