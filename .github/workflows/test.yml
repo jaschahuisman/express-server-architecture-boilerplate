@@ -2,7 +2,9 @@ name: Test workflow
 
 on:
   push:
-    branches: [ master ]
+    branches: 
+      - master
+      - development
   pull_request:
     branches: [ master ]
 
@@ -16,6 +18,9 @@ jobs:
     
     steps:
     - uses: actions/checkout@v2
+    
+    - name: MongoDB in GitHub Actions
+      uses: supercharge/mongodb-github-action@1.6.0
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
