@@ -1,4 +1,4 @@
-name: Test workflow
+name: Checkup workflow
 
 on:
   push:
@@ -19,22 +19,22 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: Use MongoDB
+    - name: Setup MongoDb
       uses: supercharge/mongodb-github-action@1.6.0
 
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Setup Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Install dependencies
+    - name: Install node modules
       run: npm install
     
-    - name: Lint
+    - name: Lint source code
       run: npm run lint
 
-    - name: Test
+    - name: Unit test source code
       run: npm run test
 
-    - name: Build
+    - name: Build source code
       run: npm run build
