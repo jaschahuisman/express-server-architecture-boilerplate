@@ -17,7 +17,7 @@
     "lint": "eslint ./",
     "build": "webpack build --config webpack.config.js",
     "start": "node ./build/index.js",
-    "test": "jest"
+    "test": "jest --verbose"
   },
   "repository": {
     "type": "git",
